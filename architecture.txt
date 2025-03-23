@@ -1,0 +1,23 @@
+autodeploy/
+├── contracts/                 # Contract code repository
+│   └── [ContractName]/        # One folder per contract
+│       ├── *.sol              # Contract source files
+│       └── deploy.ts          # Optional custom deploy logic
+├── deployments/               # Deployment state storage
+│   └── [network]/             # Network-specific records
+│       └── [ContractName].json # Deployment metadata
+├── src/
+│   ├── core/                  # Core functionality
+│   │   ├── scanner.ts         # Detects new/changed contracts
+│   │   ├── deployer.ts        # Handles deployment orchestration
+│   │   └── state.ts           # Manages deployment records
+│   ├── adapters/              # Tool integrations
+│   │   ├── hardhat.ts         # Hardhat adapter
+│   │   ├── foundry.ts         # Foundry adapter
+│   │   └── truffle.ts         # Truffle adapter
+│   ├── utils/                 # Utility functions
+│   │   └── hash.ts            # Source hashing
+│   └── cli.ts                 # Command interface
+├── hardhat.config.ts          # Static tool configuration
+├── .env                       # Environment/network variables
+└── package.json               # Dependencies
